@@ -1,4 +1,4 @@
-package com.moaaz.kafka_consumer;
+package com.moaaz.consumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

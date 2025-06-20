@@ -1,4 +1,4 @@
-package com.moaaz.kafka_consumer;
+package com.moaaz.consumer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

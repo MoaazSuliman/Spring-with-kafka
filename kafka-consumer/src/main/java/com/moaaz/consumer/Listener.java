@@ -1,7 +1,8 @@
-package com.moaaz.kafka_consumer;
+package com.moaaz.consumer;
 
 
 import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -29,5 +30,10 @@ public class Listener {
     @KafkaListener(topics = "myTopic", groupId = "group2")
     private void listen3(String message) {
         System.out.println("Message Received 3 : " + message);
+    }
+
+    @KafkaListener(topics = "orders", groupId = "order-group-1")
+    private void orderListener(@Payload Order order) {
+        System.out.println("Order is consumed, "+ order.toString());
     }
 }
