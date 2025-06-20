@@ -4,7 +4,9 @@ server:
 spring:
   application:
     name: kafka-consumer
-
-
-  cloud:
-    bootstrap-server: localhost:9092
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: my-group
