@@ -1,0 +1,9 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: kafka-producer
+
+  cloud:
+    bootstrap-server: localhost:9092
